@@ -9,7 +9,6 @@ Currently, two official plugins are available:
 
 
 Now run:
-
-  cd frontend
-  npm install
-  npm run dev
+cd frontend
+npm install
+npm run dev
