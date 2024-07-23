@@ -3,6 +3,7 @@ import './navigation.css';
 import Sidebar from '../sidebar/sidebar';
 import { FaUserCircle } from 'react-icons/fa';
 import logo from '../../assets/Mk-logo.jpg'; 
+import ProfilePopup from './profilepopup';
 const NavBar = () => {
   const [showPopup, setShowPopup] = useState(false);
 
