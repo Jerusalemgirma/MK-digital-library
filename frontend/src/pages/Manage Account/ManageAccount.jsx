@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ManageAccount.css'; 
 import { FaUserCircle } from 'react-icons/fa'; 
+import About from './About';
 
 const ManageAccount = () => {
   const [activeLink, setActiveLink] = useState(''); 
@@ -70,7 +71,7 @@ const ManageAccount = () => {
         {activeLink === 'video'  }
         {activeLink === 'audio' }
         {activeLink === 'bookmark' }
-        {activeLink === 'about' }
+        {activeLink === 'about' && <About />}
       </div>
     </div>
   );
