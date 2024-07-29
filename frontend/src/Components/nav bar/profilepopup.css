@@ -21,7 +21,6 @@
   width: 400px;
   max-height: 300px;
   overflow-y: auto;
-  /* Allows scrolling if content is too tall */
 }
 
 .popup-content h2 {
@@ -45,13 +44,11 @@
 
 .popup-content button:first-of-type {
   background-color: #007bff;
-  /* Blue color for Manage Account */
   color: white;
 }
 
 .popup-content button:last-of-type {
   background-color: #dc3545;
-  /* Red color for Logout */
   color: white;
 }
 

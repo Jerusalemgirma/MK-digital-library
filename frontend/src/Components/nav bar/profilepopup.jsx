@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom'; // Ensure you're using react-router
+import { useNavigate } from 'react-router-dom'; 
 import './profilepopup.css';
 
 const ProfilePopup = ({ onClose }) => {
@@ -22,13 +22,12 @@ const ProfilePopup = ({ onClose }) => {
 
   const handleManageAccountClick = () => {
     navigate('/manageaccount'); // Navigate to the manage account page
-    onClose(); // Close the popup
+    onClose(); 
   };
 
   const handleLogoutClick = () => {
-    // Implement your logout logic here
     console.log('Logged out');
-    onClose(); // Close the popup
+    onClose(); 
   };
 
   return (

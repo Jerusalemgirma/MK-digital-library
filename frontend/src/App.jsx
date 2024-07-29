@@ -12,7 +12,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/manageaccount" element={<ManageAccount />} /> {/* Add this route */}
+          <Route path="/manageaccount" element={<ManageAccount />} />
         </Routes>
       </div>
     </BrowserRouter>
