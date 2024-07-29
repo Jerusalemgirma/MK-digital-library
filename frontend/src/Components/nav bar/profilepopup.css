@@ -12,25 +12,49 @@
 }
 
 .popup-content {
-  background: grey;
+  background: white;
   color: black;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   width: 400px;
-  height: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+  /* Allows scrolling if content is too tall */
 }
 
 .popup-content h2 {
   margin-top: 0;
 }
 
+.popup-content p {
+  margin: 10px 0;
+}
+
 .popup-content button {
-  margin-top: 20px;
-  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
   border: none;
-  background-color: red;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-content button:first-of-type {
+  background-color: #007bff;
+  /* Blue color for Manage Account */
+  color: white;
+}
+
+.popup-content button:last-of-type {
+  background-color: #dc3545;
+  /* Red color for Logout */
+  color: white;
+}
+
+.popup-content button:hover {
+  opacity: 0.8;
 }
