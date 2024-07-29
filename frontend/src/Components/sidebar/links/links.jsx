@@ -1,6 +1,21 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiHome, FiUser, FiTool, FiImage, FiMail } from "react-icons/fi";
+import "./links.css"; // Assuming you have a CSS file for styling
+import {
+  FiHome,
+  FiUser,
+  FiTool,
+  FiImage,
+  FiMail,
+  FiBook,
+  FiVoicemail,
+  FiVolume,
+  FiVideo,
+  FiBookOpen,
+  FiBarChart,
+  FiSidebar,
+  FiActivity,
+} from "react-icons/fi";
 
 const Links = () => {
   const variants = {
@@ -24,7 +39,7 @@ const Links = () => {
     },
     closed: {
       y: 50,
-      opacity: 1,
+      opacity: 0, // Initially hidden
     },
   };
 
@@ -32,14 +47,15 @@ const Links = () => {
 
   const items = [
     { label: "Home", icon: <FiHome /> },
-    { label: "E-book", icon: <FiUser /> },
-    { label: "Audio", icon: <FiTool /> },
-    { label: "Video", icon: <FiImage /> },
-    { label: "Magazine", icon: <FiMail /> },
+    { label: "E-book", icon: <FiBook /> },
+    { label: "Audio", icon: <FiVolume /> },
+    { label: "Video", icon: <FiVideo /> },
+    { label: "Magazine", icon: <FiBookOpen /> },
+    { label: "My activities", icon: <FiActivity /> },
     { label: "More Views" },
     {
       label: "Categories",
-      icon: <FiMail />,
+      icon: <FiSidebar />,
       isExpandable: true,
       subItems: [
         { label: "Category 1" },
@@ -71,12 +87,12 @@ const Links = () => {
             {item.icon && item.icon} {/* Render icon if it exists */}
             {item.label}
           </motion.a>
-          {item.label === "Categories" && isCategoriesExpanded && (
+          {item.label === "Categories" && (
             <motion.div
               className="dropdown"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              variants={itemVariants}
+              initial="closed"
+              animate={isCategoriesExpanded ? "open" : "closed"}
             >
               {item.subItems.map((subItem) => (
                 <a href={`#${subItem.label}`} key={subItem.label}>

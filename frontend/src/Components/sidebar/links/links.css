@@ -1,0 +1,23 @@
+
+
+.dropdown {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  z-index: 1; /* Ensure dropdown is above other elements */
+}
+
+.dropdown a {
+  display: block;
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown a:hover {
+  background-color: #f0f0f0;
+}
