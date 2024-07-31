@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 import "./links.css"; // Assuming you have a CSS file for styling
 import {
+
   FiHome,
   FiUser,
   FiTool,
@@ -46,12 +48,12 @@ const Links = () => {
   const [isCategoriesExpanded, setIsCategoriesExpanded] = useState(false);
 
   const items = [
-    { label: "Home", icon: <FiHome /> },
-    { label: "E-book", icon: <FiBook /> },
-    { label: "Audio", icon: <FiVolume /> },
-    { label: "Video", icon: <FiVideo /> },
-    { label: "Magazine", icon: <FiBookOpen /> },
-    { label: "My activities", icon: <FiActivity /> },
+    { label: "Home", icon: <FiHome /> }, 
+    { label: "E-book", icon: <FiBook />},
+    { label: "Audio", icon: <FiVolume />}, 
+    { label: "Video", icon: <FiVideo />},  
+    { label: "Magazine", icon: <FiBookOpen />},
+    { label: "My Activities", icon: <FiActivity />}, 
     { label: "More Views" },
     {
       label: "Categories",
@@ -76,7 +78,8 @@ const Links = () => {
           className="link-wrapper"
           key={item.label}
           variants={variants}
-        >
+        > 
+        
           <motion.a
             href={`#${item.label}`}
             variants={itemVariants}
@@ -86,6 +89,7 @@ const Links = () => {
           >
             {item.icon && item.icon} {/* Render icon if it exists */}
             {item.label}
+           
           </motion.a>
           {item.label === "Categories" && (
             <motion.div
