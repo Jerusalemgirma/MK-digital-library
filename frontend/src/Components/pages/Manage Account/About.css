@@ -1,0 +1,47 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 10px;
+    height: calc(50vh - 100px);
+}
+
+.edit-button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    width: 500%;
+    max-width: 500px;
+}
+
+.about-description {
+    width: 100%;
+    padding-right: 150px;
+}
+
+.about-description h2 {
+    font-size: 24px;
+}
+
+.about-description p {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.about-details {
+    width: 60%;
+}
+.about-details p {
+    font-size: 16px;
+    line-height: 3;
+}
